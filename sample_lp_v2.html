@@ -23,17 +23,17 @@
     a { text-decoration: none; color: inherit; }
 
     :root {
-      --green: #4a7c59;
-      --green-dark: #2d5f3f;
-      --green-deep: #1a3d2a;
-      --green-light: #a8d5b5;
-      --green-pale: #e8f3ec;
-      --gold: #c9a961;
-      --gold-light: #e8d5a0;
+      --green: #5a9a6e;
+      --green-dark: #3d7a54;
+      --green-deep: #2a5e40;
+      --green-light: #b8e0c5;
+      --green-pale: #eef7f1;
+      --gold: #d4b56a;
+      --gold-light: #eedfa8;
       --white: #ffffff;
-      --cream: #fafaf7;
-      --text: #1a2e1f;
-      --text-light: #556b5d;
+      --cream: #fcfcf9;
+      --text: #2a3d30;
+      --text-light: #6a8575;
       --red: #c4474b;
       --line-green: #06c755;
     }
@@ -45,10 +45,11 @@
       background: linear-gradient(90deg, var(--red), #d85a5e, var(--red));
       color: #fff;
       text-align: center;
-      padding: 10px 14px;
-      font-size: 12px;
+      padding: 8px 10px;
+      font-size: 10px;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
       position: sticky;
       top: 0;
       z-index: 90;
@@ -279,20 +280,21 @@
     /* 縦書きテキスト */
     .fv-vertical {
       position: absolute;
-      top: 20px;
-      right: 24px;
+      bottom: 12px;
+      right: 12px;
       writing-mode: vertical-rl;
       font-family: 'Noto Serif JP', serif;
-      font-size: 11px;
-      color: var(--gold);
-      letter-spacing: 6px;
+      font-size: 10px;
+      color: #fff;
+      letter-spacing: 5px;
       font-weight: 700;
       z-index: 6;
-      padding: 14px 6px 14px 10px;
-      border-right: 1px solid rgba(201,169,97,0.5);
-      border-top: 1px solid rgba(201,169,97,0.5);
+      padding: 10px 5px 10px 8px;
+      background: rgba(42,94,64,0.8);
+      border-right: 2px solid var(--gold);
+      border-radius: 4px 0 0 4px;
       animation: fadeIn 1.5s ease-out 0.4s backwards;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      text-shadow: none;
     }
     .fv-vertical::before {
       content: '✦';
