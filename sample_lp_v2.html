@@ -815,24 +815,35 @@
        ======================================== */
     .trust {
       background: var(--green-pale);
-      padding: 36px 20px;
+      padding: 12px 14px 6px;
     }
     .trust-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-      padding: 0 12px;
+      gap: 6px;
     }
     .trust-item {
       background: #fff;
-      padding: 10px 4px 8px;
-      border-radius: 8px;
+      padding: 12px 6px 10px;
+      border-radius: 10px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(58,122,85,0.08);
-      border: 1px solid rgba(106,171,126,0.15);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(58,122,85,0.06);
+    }
+    .trust-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--gold));
     }
     .trust-icon {
-      display: none;
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: block;
     }
     .trust-num {
       font-family: 'Noto Serif JP', serif;
@@ -864,7 +875,7 @@
     }
     .problem-card-top {
       text-align: center;
-      padding: 28px 20px 18px;
+      padding: 16px 20px 14px;
       background: linear-gradient(135deg, var(--green-pale), #fff);
     }
     .problem-card-top .small {
