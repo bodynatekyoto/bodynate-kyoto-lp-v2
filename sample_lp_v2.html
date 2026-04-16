@@ -819,30 +819,62 @@
     }
     .trust-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 0 16px;
     }
     .trust-item {
-      background: #fff;
-      padding: 16px 6px;
-      border-radius: 8px;
+      background: linear-gradient(135deg, #fff 0%, var(--green-pale) 100%);
+      padding: 20px 14px 16px;
+      border-radius: 14px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(74,124,89,0.1);
-      border-top: 3px solid var(--green);
+      box-shadow: 0 4px 16px rgba(58,122,85,0.08);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(106,171,126,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .trust-item:active {
+      transform: scale(0.97);
+    }
+    .trust-item::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, rgba(212,181,106,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .trust-icon {
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 10px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(58,122,85,0.25);
     }
     .trust-num {
       font-family: 'Noto Serif JP', serif;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 900;
-      color: var(--green);
-      line-height: 1;
+      color: var(--green-dark);
+      line-height: 1.1;
+      margin-bottom: 2px;
     }
-    .trust-num .unit { font-size: 11px; color: var(--text); }
+    .trust-num .unit { font-size: 12px; color: var(--text-light); font-weight: 700; }
     .trust-label {
       font-size: 10px;
       color: var(--text-light);
-      margin-top: 6px;
-      font-weight: 500;
+      margin-top: 4px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     /* ========================================
@@ -2458,26 +2490,32 @@
   <section class="trust reveal">
     <div class="trust-grid">
       <div class="trust-item">
+        <div class="trust-icon">👤</div>
         <div class="trust-num">500<span class="unit">名+</span></div>
         <div class="trust-label">指導実績</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num">★4.9</div>
+        <div class="trust-icon">⭐</div>
+        <div class="trust-num">4.9</div>
         <div class="trust-label">Google評価</div>
       </div>
       <div class="trust-item">
+        <div class="trust-icon">🔄</div>
         <div class="trust-num">98<span class="unit">%</span></div>
         <div class="trust-label">継続率</div>
       </div>
       <div class="trust-item">
+        <div class="trust-icon">📍</div>
         <div class="trust-num">3<span class="unit">店舗</span></div>
         <div class="trust-label">神戸・京都・和歌山</div>
       </div>
       <div class="trust-item">
+        <div class="trust-icon">🚶</div>
         <div class="trust-num">徒歩<span class="unit">5分</span></div>
         <div class="trust-label">三宮・元町駅</div>
       </div>
       <div class="trust-item">
+        <div class="trust-icon">🌿</div>
         <div class="trust-num">全年齢</div>
         <div class="trust-label">20〜70代対応</div>
       </div>
