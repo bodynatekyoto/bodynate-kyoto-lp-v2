@@ -1356,42 +1356,77 @@
     }
 
     /* ========================================
-       SECTION: ビフォーアフター
+       SECTION: ビフォーアフター（洗練デザイン）
        ======================================== */
     .ba {
-      background: var(--green-pale);
-      padding-bottom: 36px;
+      background: linear-gradient(180deg, var(--green-pale) 0%, #fff 100%);
+      padding-bottom: 40px;
+      position: relative;
+    }
+    .ba::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: radial-gradient(ellipse at top, rgba(212,181,106,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
     .ba-list {
-      padding: 0 20px;
+      padding: 0 16px;
     }
     .ba-card {
       background: #fff;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 20px rgba(74,124,89,0.12);
+      margin-bottom: 24px;
+      box-shadow:
+        0 10px 40px rgba(58,122,85,0.12),
+        0 2px 8px rgba(58,122,85,0.06);
       position: relative;
+      border: 1px solid rgba(212,181,106,0.15);
+    }
+    .ba-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--gold), var(--green));
+      z-index: 4;
     }
     .ba-tag {
       position: absolute;
-      top: 14px;
-      left: -8px;
-      background: var(--gold);
-      color: var(--green-deep);
-      padding: 5px 16px;
-      font-size: 10px;
+      top: 18px;
+      left: 16px;
+      background: linear-gradient(135deg, var(--green-deep), var(--green-dark));
+      color: var(--gold);
+      padding: 6px 16px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 11px;
       font-weight: 900;
-      letter-spacing: 2px;
-      transform: rotate(-4deg);
+      letter-spacing: 3px;
       z-index: 3;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      border-radius: 2px;
+    }
+    .ba-tag::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -6px;
+      transform: translateY(-50%);
+      border: 3px solid transparent;
+      border-right-color: var(--green-deep);
     }
     .ba-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 300px;
+      height: 320px;
       position: relative;
+      padding-top: 0;
     }
     .ba-side {
       position: relative;
@@ -1402,32 +1437,43 @@
       height: 100%;
       object-fit: cover;
     }
+    .ba-side::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
+      pointer-events: none;
+    }
     .ba-label {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      bottom: 14px;
+      left: 14px;
       background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
       color: var(--text);
-      padding: 5px 14px;
+      padding: 6px 16px;
       font-size: 10px;
       font-weight: 900;
-      letter-spacing: 2px;
-      border-radius: 2px;
+      letter-spacing: 3px;
+      border-radius: 20px;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
     .ba-label.after {
       left: auto;
-      right: 12px;
-      background: var(--green);
-      color: #fff;
+      right: 14px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--green-deep);
     }
     .ba-divider {
       position: absolute;
       top: 0;
       left: 50%;
-      width: 2px;
+      width: 1px;
       height: 100%;
-      background: var(--gold);
+      background: linear-gradient(180deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
       transform: translateX(-50%);
+      z-index: 2;
     }
     .ba-divider::after {
       content: '→';
@@ -1435,53 +1481,80 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: var(--gold);
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
       color: var(--green-deep);
-      width: 42px;
-      height: 42px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 900;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      box-shadow:
+        0 6px 20px rgba(0,0,0,0.3),
+        0 0 0 4px rgba(255,255,255,0.9),
+        0 0 0 5px rgba(212,181,106,0.4);
     }
     .ba-stats {
-      padding: 18px 20px;
+      padding: 22px 20px;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background: var(--text);
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 100%);
       color: #fff;
+      position: relative;
+      overflow: hidden;
     }
-    .ba-stat { text-align: center; }
+    .ba-stats::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(212,181,106,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .ba-stat {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
     .ba-stat-num {
       font-family: 'Noto Serif JP', serif;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 900;
       color: var(--gold);
       line-height: 1;
+      letter-spacing: -1px;
     }
     .ba-stat-label {
       font-size: 10px;
-      color: rgba(255,255,255,0.6);
-      letter-spacing: 1px;
-      margin-top: 4px;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 2px;
+      margin-top: 6px;
+      font-weight: 500;
     }
     .ba-stat-divider {
       width: 1px;
-      height: 36px;
-      background: rgba(255,255,255,0.15);
+      height: 40px;
+      background: linear-gradient(180deg, transparent, rgba(212,181,106,0.5), transparent);
     }
     .ba-meta {
-      padding: 12px 20px 16px;
-      font-size: 12px;
+      padding: 16px 20px 18px;
+      font-size: 13px;
       color: var(--text-light);
       text-align: center;
       background: #fff;
+      letter-spacing: 0.5px;
     }
-    .ba-meta strong { color: var(--green); font-weight: 700; }
+    .ba-meta strong {
+      color: var(--green-dark);
+      font-weight: 900;
+      font-size: 14px;
+      font-family: 'Noto Serif JP', serif;
+    }
 
     /* ========================================
        SECTION: お客様の声
@@ -2935,7 +3008,7 @@
         <div class="voice-header">
           <div class="voice-avatar"><img src="sample_img/voice_customer3.jpg" alt=""></div>
           <div>
-            <div class="voice-person-name">M.Kさん（38歳）</div>
+            <div class="voice-person-name">Mさん（38歳）</div>
             <div class="voice-stars" style="color:#f4b400;font-size:13px;letter-spacing:2px;">★★★★★</div>
           </div>
         </div>
@@ -2950,7 +3023,7 @@
         <div class="voice-header">
           <div class="voice-avatar"><img src="sample_img/voice_customer1.jpg" alt=""></div>
           <div>
-            <div class="voice-person-name">Y.Sさん（38歳）</div>
+            <div class="voice-person-name">Yさん（38歳）</div>
             <div class="voice-stars" style="color:#f4b400;font-size:13px;letter-spacing:2px;">★★★★★</div>
           </div>
         </div>
@@ -2965,7 +3038,7 @@
         <div class="voice-header">
           <div class="voice-avatar"><img src="sample_img/voice_customer2.jpg" alt=""></div>
           <div>
-            <div class="voice-person-name">T.Aさん（33歳）</div>
+            <div class="voice-person-name">Uさん（33歳）</div>
             <div class="voice-stars" style="color:#f4b400;font-size:13px;letter-spacing:2px;">★★★★★</div>
           </div>
         </div>
@@ -3024,9 +3097,11 @@
         <div class="staff-body">
           <div class="staff-creds">
             <span class="staff-cred">国家資格 理学療法士</span>
+            <span class="staff-cred">整形外科クリニック勤務経験</span>
+            <span class="staff-cred">プロアスリート指導経験</span>
           </div>
           <div class="staff-message">
-            産後ママの体の悩みを専門に担当しています。自身も2児の母として、子育てしながら自分の体と向き合ってきました。同じ立場だからこそ、寄り添える指導ができます。
+            整形外科クリニック・病院での勤務経験を経て、プロのスポーツ選手から一般の方まで数多く指導してきました。医療と競技の両面から得た知見を活かし、あなたの体を安全かつ最短ルートで理想へ導きます。
           </div>
         </div>
       </div>
@@ -3044,9 +3119,11 @@
         <div class="staff-body">
           <div class="staff-creds">
             <span class="staff-cred">国家資格 理学療法士</span>
+            <span class="staff-cred">整形外科クリニック勤務経験</span>
+            <span class="staff-cred">女性専門指導</span>
           </div>
           <div class="staff-message">
-            お客様一人ひとりの体と丁寧に向き合い、安心して通っていただける指導を心がけています。一緒に理想の体づくりを楽しみましょう。
+            整形外科クリニック・病院での勤務経験を活かし、女性特有の体の悩みに寄り添った指導を行っています。痛みや不調の原因を医療的視点から見極め、一人ひとりに合わせたオーダーメイドのプログラムをご提案します。
           </div>
         </div>
       </div>
