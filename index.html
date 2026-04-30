@@ -1069,20 +1069,24 @@
       font-weight: 700;
     }
     .agitation-key {
-      background: rgba(250,245,242,0.12);
-      border: 2px solid var(--green-light);
+      background: linear-gradient(135deg, rgba(201,169,97,0.14) 0%, rgba(240,220,150,0.07) 50%, rgba(201,169,97,0.14) 100%);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      outline: 2px solid rgba(201,169,97,0.7);
+      outline-offset: -2px;
       padding: 24px 20px;
       border-radius: 12px;
       margin-top: 26px;
       position: relative;
+      box-shadow: 0 0 28px rgba(201,169,97,0.28), inset 0 1px 0 rgba(240,220,150,0.35), inset 0 -1px 0 rgba(160,120,50,0.2);
     }
     .agitation-key::before {
       content: 'POINT';
       position: absolute;
       top: -10px;
       left: 20px;
-      background: var(--green-light);
-      color: var(--green-deep);
+      background: linear-gradient(135deg, #b8922a, #e8c96a, #f5e08a, #e8c96a, #b8922a);
+      color: #3a3530;
       padding: 3px 12px;
       font-size: 10px;
       font-weight: 900;
@@ -1093,7 +1097,10 @@
       font-family: 'Noto Serif JP', serif;
       font-size: 20px;
       font-weight: 900;
-      color: var(--green-light);
+      background: linear-gradient(135deg, #b8922a 0%, #e8c96a 35%, #f5e08a 50%, #e8c96a 65%, #b8922a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 12px;
       text-align: center;
       line-height: 1.5;
