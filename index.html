@@ -1593,6 +1593,60 @@
       font-family: 'Noto Serif JP', serif;
     }
 
+    .case-ba {
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr;
+      min-height: 175px;
+      margin-top: 44px;
+    }
+    .case-ba-before,
+    .case-ba-after {
+      padding: 18px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+    .case-ba-before {
+      background: #eeece9;
+    }
+    .case-ba-after {
+      background: linear-gradient(135deg, rgba(201,169,97,0.13), rgba(240,220,150,0.2));
+    }
+    .case-ba-mid {
+      background: #e2deda;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .case-ba-badge {
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+    .case-ba-before .case-ba-badge {
+      background: #c0bbb6;
+      color: #fff;
+    }
+    .case-ba-after .case-ba-badge {
+      background: var(--gold);
+      color: #3a3530;
+    }
+    .case-ba-emoji { font-size: 22px; line-height: 1; }
+    .case-ba-text {
+      font-size: 12px;
+      line-height: 1.75;
+      flex: 1;
+    }
+    .case-ba-before .case-ba-text { color: #999; }
+    .case-ba-after .case-ba-text { color: var(--text); font-weight: 500; }
+
     /* ========================================
        SECTION: お客様の声
        ======================================== */
@@ -2683,7 +2737,7 @@
   <section class="fv">
     <!-- 写真エリア -->
     <div class="fv-photo">
-      <img src="photos/26.png" alt="">
+      <img src="photos/IMG_6967.JPG" alt="">
 
       <!-- 左上装飾ドット -->
       <div class="fv-dots">
@@ -3109,97 +3163,81 @@
   </section>
 
   <!-- =================================
-       ビフォーアフター
+       改善事例
        ================================= -->
   <section class="ba reveal">
     <div class="sec-title">
-      <p class="sec-label">BEFORE / AFTER</p>
-      <h2 class="sec-heading">お客様の、<br><span class="accent">リアルな変化。</span></h2>
+      <p class="sec-label">IMPROVEMENT CASES</p>
+      <h2 class="sec-heading">痛みが消えた、<br><span class="accent">リアルな変化。</span></h2>
     </div>
 
     <div class="ba-list">
       <div class="ba-card">
         <div class="ba-tag">CASE 01</div>
-        <div class="ba-combined" style="overflow:hidden;">
-          <img src="photos/ba1.png" alt="CASE 01 Before After" style="width:100%;display:block;object-fit:cover;height:260px;object-position:center 75%;">
-          <div class="ba-combined-labels">
-            <span class="ba-label">BEFORE</span>
-            <span class="ba-label after">AFTER</span>
+        <div class="case-ba">
+          <div class="case-ba-before">
+            <span class="case-ba-badge">BEFORE</span>
+            <span class="case-ba-emoji">😔</span>
+            <p class="case-ba-text">3年間、肩こりと頭痛が続き毎日頭痛薬が手放せなかった。夜も眠れないほどの肩の張り。</p>
+          </div>
+          <div class="case-ba-mid">→</div>
+          <div class="case-ba-after">
+            <span class="case-ba-badge">AFTER</span>
+            <span class="case-ba-emoji">✨</span>
+            <p class="case-ba-text">薬なしで毎日を過ごせるように。仕事への集中力が戻り、残業も苦にならなくなった。</p>
           </div>
         </div>
         <div class="ba-stats">
           <div class="ba-stat">
-            <div class="ba-stat-num">−7<span style="font-size:14px;">cm</span></div>
-            <div class="ba-stat-label">ウエスト</div>
+            <div class="ba-stat-num">3<span style="font-size:14px;">回</span></div>
+            <div class="ba-stat-label">で頭痛消失</div>
           </div>
           <div class="ba-stat-divider"></div>
           <div class="ba-stat">
-            <div class="ba-stat-num">姿勢<span style="font-size:14px;">改善</span></div>
-            <div class="ba-stat-label">猫背解消</div>
+            <div class="ba-stat-num">2<span style="font-size:14px;">ヶ月</span></div>
+            <div class="ba-stat-label">で肩こり改善</div>
           </div>
           <div class="ba-stat-divider"></div>
           <div class="ba-stat">
-            <div class="ba-stat-num">3<span style="font-size:14px;">ヶ月</span></div>
-            <div class="ba-stat-label">期間</div>
+            <div class="ba-stat-num">薬<span style="font-size:14px;">不要</span></div>
+            <div class="ba-stat-label">毎日が楽に</div>
           </div>
         </div>
-        <div class="ba-meta"><strong>M.Kさん</strong> / 28歳</div>
+        <div class="ba-meta"><strong>M.Kさん</strong> / 38歳・会社員</div>
       </div>
 
       <div class="ba-card">
         <div class="ba-tag">CASE 02</div>
-        <div class="ba-combined">
-          <img src="photos/ba2.png" alt="CASE 02 Before After">
-          <div class="ba-combined-labels">
-            <span class="ba-label">BEFORE</span>
-            <span class="ba-label after">AFTER</span>
+        <div class="case-ba">
+          <div class="case-ba-before">
+            <span class="case-ba-badge">BEFORE</span>
+            <span class="case-ba-emoji">😣</span>
+            <p class="case-ba-text">産後から続く腰痛と骨盤の違和感。子どもを抱っこするたびに激痛が走っていた。</p>
+          </div>
+          <div class="case-ba-mid">→</div>
+          <div class="case-ba-after">
+            <span class="case-ba-badge">AFTER</span>
+            <span class="case-ba-emoji">🌸</span>
+            <p class="case-ba-text">抱っこが全く苦にならなくなった。育児を楽しめるようになり、仕事復帰にも自信がついた。</p>
           </div>
         </div>
         <div class="ba-stats">
           <div class="ba-stat">
-            <div class="ba-stat-num">−6<span style="font-size:14px;">cm</span></div>
-            <div class="ba-stat-label">ウエスト</div>
-          </div>
-          <div class="ba-stat-divider"></div>
-          <div class="ba-stat">
-            <div class="ba-stat-num">ヒップ<span style="font-size:14px;">アップ</span></div>
-            <div class="ba-stat-label">ラインすっきり</div>
+            <div class="ba-stat-num">4<span style="font-size:14px;">回</span></div>
+            <div class="ba-stat-label">で腰痛軽減</div>
           </div>
           <div class="ba-stat-divider"></div>
           <div class="ba-stat">
             <div class="ba-stat-num">3<span style="font-size:14px;">ヶ月</span></div>
-            <div class="ba-stat-label">期間</div>
-          </div>
-        </div>
-        <div class="ba-meta"><strong>Y.Sさん</strong> / 34歳</div>
-      </div>
-
-      <div class="ba-card">
-        <div class="ba-tag">CASE 03</div>
-        <div class="ba-combined">
-          <img src="photos/IMG_6785 2.jpg" alt="CASE 03 Before After">
-          <div class="ba-combined-labels">
-            <span class="ba-label">BEFORE</span>
-            <span class="ba-label after">AFTER</span>
-          </div>
-        </div>
-        <div class="ba-stats">
-          <div class="ba-stat">
-            <div class="ba-stat-num">−14<span style="font-size:14px;">cm</span></div>
-            <div class="ba-stat-label">ウエスト</div>
+            <div class="ba-stat-label">で骨盤整復</div>
           </div>
           <div class="ba-stat-divider"></div>
           <div class="ba-stat">
-            <div class="ba-stat-num">−12<span style="font-size:14px;">kg</span></div>
-            <div class="ba-stat-label">体重</div>
-          </div>
-          <div class="ba-stat-divider"></div>
-          <div class="ba-stat">
-            <div class="ba-stat-num">4<span style="font-size:14px;">ヶ月</span></div>
-            <div class="ba-stat-label">期間</div>
+            <div class="ba-stat-num">職場<span style="font-size:14px;">復帰</span></div>
+            <div class="ba-stat-label">元気に復帰</div>
           </div>
         </div>
-        <div class="ba-meta"><strong>T.Aさん</strong> / 33歳</div>
+        <div class="ba-meta"><strong>Y.Sさん</strong> / 34歳・産後ママ</div>
       </div>
     </div>
   </section>
@@ -3209,7 +3247,7 @@
        ================================= -->
   <div class="cta-triple on-dark">
     <p class="sub-label">── YOUR TURN ──</p>
-    <h3 class="title">次のBEFORE/AFTERは、<br><span class="gold">あなたかも。</span></h3>
+    <h3 class="title">次の改善事例は、<br><span class="gold">あなたかも。</span></h3>
     <a href="https://bodynate-kyoto.stores.jp/reserve/7ad334dee0c5c46da1b6/2129157/book/course_type" class="cta-btn-main">
       初回体験を予約する
       <span class="price">¥3,300（税込）/ 60分</span>
