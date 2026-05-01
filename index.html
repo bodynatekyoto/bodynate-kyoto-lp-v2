@@ -2475,6 +2475,25 @@
       transform: translateY(-4px);
       box-shadow: 0 16px 40px rgba(216,232,212,0.2);
     }
+    .staff-scenes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .staff-scene img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+    .staff-scene-label {
+      font-size: 11px;
+      color: var(--text-light);
+      text-align: center;
+      margin: 5px 0 0;
+    }
 
     /* ========================================
        PRICING HIGHLIGHT
@@ -2664,7 +2683,7 @@
   <section class="fv">
     <!-- 写真エリア -->
     <div class="fv-photo">
-      <img src="sample_img/hero_kyoto.png" alt="">
+      <img src="photos/26.png" alt="">
 
       <!-- 左上装飾ドット -->
       <div class="fv-dots">
@@ -2955,7 +2974,7 @@
     <div class="reasons-list">
       <div class="reason-item">
         <div class="reason-img">
-          <img src="sample_img/real_seitai_closeup.jpg" alt="">
+          <img src="photos/posture.jpg" alt="">
           <div class="reason-num">REASON<span class="num-big">01</span></div>
           <h3 class="reason-overlay-title"><span class="accent">理学療法士</span>が<br>骨格・姿勢を根本評価</h3>
         </div>
@@ -3048,7 +3067,7 @@
 
     <div class="program-steps">
       <div class="program-step-card">
-        <img src="sample_img/real_seitai_joint.jpg" alt="">
+        <img src="photos/IMG_6967.JPG" alt="">
         <div class="program-step-month">STEP 01</div>
         <div class="program-step-big-num">01</div>
         <div class="program-step-content">
@@ -3157,16 +3176,12 @@
 
       <div class="ba-card">
         <div class="ba-tag">CASE 03</div>
-        <div class="ba-images">
-          <div class="ba-side">
-            <img src="sample_img/ba3_before.jpg" alt="Before">
-            <div class="ba-label">BEFORE</div>
+        <div class="ba-combined">
+          <img src="photos/IMG_6785 2.jpg" alt="CASE 03 Before After">
+          <div class="ba-combined-labels">
+            <span class="ba-label">BEFORE</span>
+            <span class="ba-label after">AFTER</span>
           </div>
-          <div class="ba-side">
-            <img src="sample_img/ba3_after.jpg" alt="After">
-            <div class="ba-label after">AFTER</div>
-          </div>
-          <div class="ba-divider"></div>
         </div>
         <div class="ba-stats">
           <div class="ba-stat">
@@ -3296,6 +3311,16 @@
           </div>
           <div class="staff-message">
             整形外科クリニック・病院での勤務経験を活かし、女性特有の体の悩みに寄り添った指導を行っています。痛みや不調の原因を医療的視点から見極め、一人ひとりに合わせたオーダーメイドのプログラムをご提案します。
+          </div>
+          <div class="staff-scenes">
+            <div class="staff-scene">
+              <img src="photos/IMG_6791.JPG" alt="CHISAのプロフィール">
+              <p class="staff-scene-label">日々のトレーニング</p>
+            </div>
+            <div class="staff-scene">
+              <img src="photos/counseling.png" alt="カウンセリングの様子">
+              <p class="staff-scene-label">カウンセリングの様子</p>
+            </div>
           </div>
         </div>
       </div>
@@ -3517,7 +3542,7 @@
        ================================= -->
   <section class="final">
     <div class="final-hero">
-      <img src="sample_img/real_bridal_sunset.jpg" alt="">
+      <img src="photos/IMG_7146.JPG" alt="">
       <div class="final-hero-diag">月5名限定</div>
       <div class="final-hero-text">
         <p class="label">── LAST MESSAGE ──</p>
